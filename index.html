@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+
 <head>
     <meta charset="utf-8" />
-    <title>MP1: Mean Flow Tames Policy Learning in 1-step for Robotic Manipulation</title>
-	<!-- <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico"> -->
+    <title>MP1: MeanFlow Tames Policy Learning in 1-step for Robotic Manipulation</title>
+    <!-- <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico"> -->
     <meta content="MP1: Mean Flow Tames Policy Learning in 1-step for Robotic Manipulation" name="description" />
     <meta content="summary" name="twitter:card" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
@@ -33,138 +34,137 @@
     <script type="text/javascript" src="static/js/zoom.js"></script>
     <script type="text/javascript" src="static/js/video_comparison.js"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
+        window.dataLayer = window.dataLayer || [];
     </script>
 
-<!--    </script>-->
-<style type="text/css">
-.w3-col.l2 {
-    width: 20%;
-}
-
-@media (max-width: 1200px) {
-    .w3-col.m4 {
-        width: 33.33333%;
-    }
-}
-
-@media (max-width: 600px) {
-    .w3-col.m4 {
-        width: 50%;
-    }
-}
-
-.vidContainer {
-    padding: 0 8px !important; /* 减小内边距 */
-}
-
-    .meshViewer {
-        height: 200px;
-        width: 200px;
-        border: none;
-        overflow: hidden;
-        display: none;
-    }
-
-    .video {
-        width: 200px;
-        height: 200px;
-        position: relative;
-        top: 0;
-        left: 0;
-    }
-
-    .videoMerge {
-        position: relative;
-        top: 0;
-        left: 0;
-        z-index: 10;
-        width: 100%;
-        display: block;
-        margin: 0 auto;
-        background-size: cover;
-    }
-
-    .viewerToggle {
-        display: block;
-        text-align: center;
-        overflow: hidden;
-        border: none;
-        margin-top: 10px;
-    }
-    
-
-    .viewerToggle:hover {
-        text-decoration: none;
-    }
-
-    #load_more {
-        text-decoration: none;
-    }
-
-    .largeContainer {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: flex-end;
-        row-gap: 30px;
-    }
-
-    .emptydiv {
-        height: 59px;
-    }
-
-    .div-only-desk {
-    }
-
-    .div-only-mobile {
-    }
-
-    @media screen and (min-width: 1240px) and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
-        .div-only-desk {
-            visibility: visible;
+    <!--    </script>-->
+    <style type="text/css">
+        .w3-col.l2 {
+            width: 20%;
         }
 
-        .div-only-mobile {
-            visibility: hidden;
-            display: none;
+        @media (max-width: 1200px) {
+            .w3-col.m4 {
+                width: 33.33333%;
+            }
         }
-    }
 
-    @media screen and (max-width: 1239px) {
-        .div-only-desk {
-            visibility: hidden;
+        @media (max-width: 600px) {
+            .w3-col.m4 {
+                width: 50%;
+            }
+        }
+
+        .vidContainer {
+            padding: 0 8px !important;
+            /* 减小内边距 */
+        }
+
+        .meshViewer {
+            height: 200px;
+            width: 200px;
+            border: none;
+            overflow: hidden;
             display: none;
         }
 
-        .div-only-mobile {
-            visibility: visible;
+        .video {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            top: 0;
+            left: 0;
         }
-    }
 
-    @keyframes placeHolderShimmer {
-        0% {
-            background-position: -800px 0
+        .videoMerge {
+            position: relative;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            width: 100%;
+            display: block;
+            margin: 0 auto;
+            background-size: cover;
         }
-        100% {
-            background-position: 800px 0
+
+        .viewerToggle {
+            display: block;
+            text-align: center;
+            overflow: hidden;
+            border: none;
+            margin-top: 10px;
         }
-    }
 
-    .animated-background {
-        animation-duration: 2s;
-        animation-fill-mode: forwards;
-        animation-iteration-count: infinite;
-        animation-name: placeHolderShimmer;
-        animation-timing-function: linear;
-        background-color: #f6f7f8;
-        background: linear-gradient(to right, #eeeeee 8%, #bbbbbb 18%, #eeeeee 33%);
-        background-size: 800px 104px;
-        height: 256px;
-        width: 256px;
-        position: relative;
-    }
 
-</style>
+        .viewerToggle:hover {
+            text-decoration: none;
+        }
+
+        #load_more {
+            text-decoration: none;
+        }
+
+        .largeContainer {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-end;
+            row-gap: 30px;
+        }
+
+        .emptydiv {
+            height: 59px;
+        }
+
+        .div-only-desk {}
+
+        .div-only-mobile {}
+
+        @media screen and (min-width: 1240px) and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+            .div-only-desk {
+                visibility: visible;
+            }
+
+            .div-only-mobile {
+                visibility: hidden;
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 1239px) {
+            .div-only-desk {
+                visibility: hidden;
+                display: none;
+            }
+
+            .div-only-mobile {
+                visibility: visible;
+            }
+        }
+
+        @keyframes placeHolderShimmer {
+            0% {
+                background-position: -800px 0
+            }
+
+            100% {
+                background-position: 800px 0
+            }
+        }
+
+        .animated-background {
+            animation-duration: 2s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: infinite;
+            animation-name: placeHolderShimmer;
+            animation-timing-function: linear;
+            background-color: #f6f7f8;
+            background: linear-gradient(to right, #eeeeee 8%, #bbbbbb 18%, #eeeeee 33%);
+            background-size: 800px 104px;
+            height: 256px;
+            width: 256px;
+            position: relative;
+        }
+    </style>
 </head>
 
 
@@ -178,35 +178,47 @@
                 </span>
                 <br />
                 <span style="font-size: 0.85em;">
-                    <span style="color: red; font-weight: 900;">M</span>ean Flow Tames <span style="color: red; font-weight: 900;">P</span>olicy Learning in <span style="color: red; font-weight: 900;">1</span>-step for Robotic Manipulation
+                    <span style="color: red; font-weight: 900;">M</span>ean Flow Tames <span
+                        style="color: red; font-weight: 900;">P</span>olicy Learning in <span
+                        style="color: red; font-weight: 900;">1</span>-step for Robotic Manipulation
                 </span>
             </h1>
             <h2 class="grey-heading_nerf" style="text-align: center;"> Anonymous AAAI submission </h2>
-                <div class="external-link">
-                  <a class="btn" href="https://github.com" role="button" target="_blank" disabled>
-                      <i class="fa-brands fa-github"></i> Anonymous Code </a>
-                </div>
-                
+            <div class="external-link">
+                <a class="btn" href="https://anonymous.4open.science/r/MP1-2254" role="button" target="_blank">
+                    <i class="fa-brands fa-github"></i> Anonymous Code </a>
             </div>
+
         </div>
+    </div>
     </div>
 
 
     <div class="white_section_nerf w-container" style="display: flex; flex-direction: column; align-items: center;">
         <div class="grid-container-1" style="width: 80%; max-width: 1000px; margin: 0 auto;">
-            <img src="assets/images/pipeline.png" style="display: block; margin: 0 auto; width: 100%; max-width: 1000px; height: auto;" loading="lazy" alt="Strategy">
+            <img src="assets/images/pipeline.png"
+                style="display: block; margin: 0 auto; width: 100%; max-width: 1000px; height: auto;" loading="lazy"
+                alt="Strategy">
             <p style="width: 100%; max-width: 1000px; margin: 0 auto; color: #000;">
-                The MP1 takes the historical observation point cloud and the robot's state as inputs. These inputs are processed through a visual encoder and a state encoder, respectively, and then serve as conditional inputs to the UNet-integrated MeanFlow. After passing through the MeanFlow, the model computes regression loss (&#x1D4C1;<sub>cfg</sub>) between the mean velocity generated from the initial noise and the target velocity. This &#x1D4C1;<sub>cfg</sub> is combined with a Dispersive Loss (&#x1D4C1;<sub>disp</sub>) imposed on the UNet’s hidden states to jointly optimize the network parameters.
+                The MP1 takes the historical observation point cloud and the robot's state as inputs. These inputs are
+                processed through a visual encoder and a state encoder, respectively, and then serve as conditional
+                inputs to the UNet-integrated MeanFlow. After passing through the MeanFlow, the model computes
+                regression loss (&#x1D4C1;<sub>cfg</sub>) between the mean velocity generated from the initial noise and
+                the target velocity. This &#x1D4C1;<sub>cfg</sub> is combined with a Dispersive Loss
+                (&#x1D4C1;<sub>disp</sub>) imposed on the UNet’s hidden states to jointly optimize the network
+                parameters.
             </p>
         </div>
     </div>
-    
 
-    <div class="white_section_nerf w-container" style="display: flex; flex-direction: column; align-items: center; text-align: center; padding-top: 40px; padding-bottom: 40px;">
+
+    <div class="white_section_nerf w-container"
+        style="display: flex; flex-direction: column; align-items: center; text-align: center; padding-top: 40px; padding-bottom: 40px;">
         <h2 class="grey-heading_nerf">Real World Demos</h2>
-    
+
         <!-- Task 1: Hammer -->
-        <h3 style="font-size: 1.8em; font-weight: 500; margin-top: 40px; margin-bottom: 20px; color: #333;">Task: Hammer</h3>
+        <h3 style="font-size: 1.8em; font-weight: 500; margin-top: 40px; margin-bottom: 20px; color: #333;">Task: Hammer
+        </h3>
         <div class="w3-row-padding" style="width: 100%;">
             <div class="w3-col l4 m4 s12" style="margin-bottom: 20px;">
                 <h4 style="font-size: 1.2em; font-weight: 500; margin-bottom: 10px;">MP1 (Ours)</h4>
@@ -228,9 +240,10 @@
             </div>
         </div>
         <p style="text-align: center; font-style: italic;">Hammer – Grasp a hammer and strike a pig.</p>
-    
+
         <!-- Task 2: Drawer Close -->
-        <h3 style="font-size: 1.8em; font-weight: 500; margin-top: 40px; margin-bottom: 20px; color: #333;">Task: Drawer Close</h3>
+        <h3 style="font-size: 1.8em; font-weight: 500; margin-top: 40px; margin-bottom: 20px; color: #333;">Task: Drawer
+            Close</h3>
         <div class="w3-row-padding" style="width: 100%;">
             <div class="w3-col l4 m4 s12" style="margin-bottom: 20px;">
                 <h4 style="font-size: 1.2em; font-weight: 500; margin-bottom: 10px;">MP1 (Ours)</h4>
@@ -252,9 +265,10 @@
             </div>
         </div>
         <p style="text-align: center; font-style: italic;">Drawer Close – Closing a drawer.</p>
-    
+
         <!-- Task 3: Heat-Water -->
-        <h3 style="font-size: 1.8em; font-weight: 500; margin-top: 40px; margin-bottom: 20px; color: #333;">Task: Heat Water</h3>
+        <h3 style="font-size: 1.8em; font-weight: 500; margin-top: 40px; margin-bottom: 20px; color: #333;">Task: Heat
+            Water</h3>
         <div class="w3-row-padding" style="width: 100%;">
             <div class="w3-col l4 m4 s12" style="margin-bottom: 20px;">
                 <h4 style="font-size: 1.2em; font-weight: 500; margin-bottom: 10px;">MP1 (Ours)</h4>
@@ -276,58 +290,61 @@
             </div>
         </div>
         <p style="text-align: center; font-style: italic;">Heat Water – Position a kettle in a suitable location.</p>
-    
-            <!-- Task 4-->
-            <h3 style="font-size: 1.8em; font-weight: 500; margin-top: 40px; margin-bottom: 20px; color: #333;">Task: Stack Block</h3>
-            <div class="w3-row-padding" style="width: 100%;">
-                <div class="w3-col l4 m4 s12" style="margin-bottom: 20px;">
-                    <h4 style="font-size: 1.2em; font-weight: 500; margin-bottom: 10px;">MP1 (Ours)</h4>
-                    <video style="width:100%; border-radius: 10px;" autoplay loop muted controls>
-                        <source src="assets/video/stack-block-mp.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="w3-col l4 m4 s12" style="margin-bottom: 20px;">
-                    <h4 style="font-size: 1.2em; font-weight: 500; margin-bottom: 10px;">DP3</h4>
-                    <video style="width:100%; border-radius: 10px;" autoplay loop muted controls>
-                        <source src="assets/video/stack-block-dp3.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="w3-col l4 m4 s12" style="margin-bottom: 20px;">
-                    <h4 style="font-size: 1.2em; font-weight: 500; margin-bottom: 10px;">Flow Policy</h4>
-                    <video style="width:100%; border-radius: 10px;" autoplay loop muted controls>
-                        <source src="assets/video/stack-block-flow.mp4" type="video/mp4">
-                    </video>
-                </div>
+
+        <!-- Task 4-->
+        <h3 style="font-size: 1.8em; font-weight: 500; margin-top: 40px; margin-bottom: 20px; color: #333;">Task: Stack
+            Block</h3>
+        <div class="w3-row-padding" style="width: 100%;">
+            <div class="w3-col l4 m4 s12" style="margin-bottom: 20px;">
+                <h4 style="font-size: 1.2em; font-weight: 500; margin-bottom: 10px;">MP1 (Ours)</h4>
+                <video style="width:100%; border-radius: 10px;" autoplay loop muted controls>
+                    <source src="assets/video/stack-block-mp.mp4" type="video/mp4">
+                </video>
             </div>
-            <p style="text-align: center; font-style: italic;">Stack Block – Stack a block.</p>
-    
-            <!-- Task 5-->
-            <h3 style="font-size: 1.8em; font-weight: 500; margin-top: 40px; margin-bottom: 20px; color: #333;">Task: Spoon</h3>
-            <div class="w3-row-padding" style="width: 100%;">
-                <div class="w3-col l4 m4 s12" style="margin-bottom: 20px;">
-                    <h4 style="font-size: 1.2em; font-weight: 500; margin-bottom: 10px;">MP1 (Ours)</h4>
-                    <video style="width:100%; border-radius: 10px;" autoplay loop muted controls>
-                        <source src="assets/video/spoon-mp.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="w3-col l4 m4 s12" style="margin-bottom: 20px;">
-                    <h4 style="font-size: 1.2em; font-weight: 500; margin-bottom: 10px;">DP3</h4>
-                    <video style="width:100%; border-radius: 10px;" autoplay loop muted controls>
-                            <source src="assets/video/spoon-dp3.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="w3-col l4 m4 s12" style="margin-bottom: 20px;">
-                    <h4 style="font-size: 1.2em; font-weight: 500; margin-bottom: 10px;">Flow Policy</h4>
-                    <video style="width:100%; border-radius: 10px;" autoplay loop muted controls>
-                        <source src="assets/video/spoon-flow.mp4" type="video/mp4">
-                    </video>
-                </div>
+            <div class="w3-col l4 m4 s12" style="margin-bottom: 20px;">
+                <h4 style="font-size: 1.2em; font-weight: 500; margin-bottom: 10px;">DP3</h4>
+                <video style="width:100%; border-radius: 10px;" autoplay loop muted controls>
+                    <source src="assets/video/stack-block-dp3.mp4" type="video/mp4">
+                </video>
             </div>
-            <p style="text-align: center; font-style: italic;">Spoon - Put the spoon in the bowl.</p>
+            <div class="w3-col l4 m4 s12" style="margin-bottom: 20px;">
+                <h4 style="font-size: 1.2em; font-weight: 500; margin-bottom: 10px;">Flow Policy</h4>
+                <video style="width:100%; border-radius: 10px;" autoplay loop muted controls>
+                    <source src="assets/video/stack-block-flow.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <p style="text-align: center; font-style: italic;">Stack Block – Stack a block.</p>
+
+        <!-- Task 5-->
+        <h3 style="font-size: 1.8em; font-weight: 500; margin-top: 40px; margin-bottom: 20px; color: #333;">Task: Spoon
+        </h3>
+        <div class="w3-row-padding" style="width: 100%;">
+            <div class="w3-col l4 m4 s12" style="margin-bottom: 20px;">
+                <h4 style="font-size: 1.2em; font-weight: 500; margin-bottom: 10px;">MP1 (Ours)</h4>
+                <video style="width:100%; border-radius: 10px;" autoplay loop muted controls>
+                    <source src="assets/video/spoon-mp.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="w3-col l4 m4 s12" style="margin-bottom: 20px;">
+                <h4 style="font-size: 1.2em; font-weight: 500; margin-bottom: 10px;">DP3</h4>
+                <video style="width:100%; border-radius: 10px;" autoplay loop muted controls>
+                    <source src="assets/video/spoon-dp3.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="w3-col l4 m4 s12" style="margin-bottom: 20px;">
+                <h4 style="font-size: 1.2em; font-weight: 500; margin-bottom: 10px;">Flow Policy</h4>
+                <video style="width:100%; border-radius: 10px;" autoplay loop muted controls>
+                    <source src="assets/video/spoon-flow.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <p style="text-align: center; font-style: italic;">Spoon - Put the spoon in the bowl.</p>
     </div>
 
 
-    <div class="white_section_nerf w-container" style="display: flex; flex-direction: column; align-items: center; text-align: center; padding-top: 40px; padding-bottom: 40px;">
+    <div class="white_section_nerf w-container"
+        style="display: flex; flex-direction: column; align-items: center; text-align: center; padding-top: 40px; padding-bottom: 40px;">
         <h2 class="grey-heading_nerf">Simulation Robot Experiments</h2>
         <div class="w3-row-padding" style="width: 100%; margin-top: 20px;">
             <div class="w3-col l4 m4 s12" style="margin-bottom: 20px;">
@@ -349,7 +366,8 @@
                 </video>
             </div>
         </div>
-        <p style="text-align: center; font-style: italic; margin-top: 20px;">Simulation results for Hammer, Drawer Close, and Pick Place tasks.</p>
+        <p style="text-align: center; font-style: italic; margin-top: 20px;">Simulation results for Hammer, Drawer
+            Close, and Pick Place tasks.</p>
 
         <!-- New Simulation Tasks -->
         <div class="w3-row-padding" style="width: 100%; margin-top: 20px;">
@@ -372,28 +390,49 @@
                 </video>
             </div>
         </div>
-        <p style="text-align: center; font-style: italic; margin-top: 20px;">Simulation results for Assembly, Coffee Pull, and Stick Push tasks.</p>
+        <p style="text-align: center; font-style: italic; margin-top: 20px;">Simulation results for Assembly, Coffee
+            Pull, and Stick Push tasks.</p>
     </div>
 
     <div data-anchor="slide1" class="section nerf_section">
         <div class="w-container grey_container" style="display: flex; flex-direction: column; align-items: center;">
             <h2 class="grey-heading_nerf" style="text-align: center;">Abstract</h2>
             <p class="paragraph-3 nerf_text nerf_results_text">
-                In robot manipulation, robot learning is becoming a prevailing approach. However, generative models within this field face a fundamental trade-off between the slow, iterative sampling of diffusion models and the architectural constraints of faster Flow-based methods, which often rely on explicit consistency losses.
-                To address these limitations, we introduce MP1, which pairs 3D point-cloud inputs with the MeanFlow paradigm to generate action trajectories in one network function evaluation (1-NFE). By directly learning the interval-averaged velocity via the MeanFlow Identity, our policy avoids any additional consistency constraints. This formulation eliminates numerical ODE-solver errors during inference, yielding more precise trajectories.
-                MP1 further incorporates CFG for improved trajectory controllability while retaining 1-NFE inference without reintroducing structural constraints. Because subtle scene-context variations are critical for robot learning, especially in few-shot learning, we introduce a lightweight <i>Dispersive Loss</i> that repels state embeddings during training, boosting generalization without slowing inference.
-                We validate our method on the Adroit and Meta-World benchmarks, as well as in real-world scenarios. Experimental results show MP1 achieves superior average task success rates, outperforming DP3 by 10.2% and FlowPolicy by 7.3%. Its average inference time is only 6.8 ms—19× faster than DP3 and nearly 2× faster than FlowPolicy.
-                Our code is available at <a href="https://anonymous.4open.science/r/xxxx" target="_blank">https://anonymous.4open.science/r/xxxx</a>.
+                In robot manipulation, robot learning is becoming a prevailing approach. However, generative models
+                within this field face a fundamental trade-off between the slow, iterative sampling of diffusion models
+                and the architectural constraints of faster Flow-based methods, which often rely on explicit consistency
+                losses.
+                To address these limitations, we introduce MP1, which pairs 3D point-cloud inputs with the MeanFlow
+                paradigm to generate action trajectories in one network function evaluation (1-NFE). By directly
+                learning the interval-averaged velocity via the MeanFlow Identity, our policy avoids any additional
+                consistency constraints. This formulation eliminates numerical ODE-solver errors during inference,
+                yielding more precise trajectories.
+                MP1 further incorporates CFG for improved trajectory controllability while retaining 1-NFE inference
+                without reintroducing structural constraints. Because subtle scene-context variations are critical for
+                robot learning, especially in few-shot learning, we introduce a lightweight <i>Dispersive Loss</i> that
+                repels state embeddings during training, boosting generalization without slowing inference.
+                We validate our method on the Adroit and Meta-World benchmarks, as well as in real-world scenarios.
+                Experimental results show MP1 achieves superior average task success rates, outperforming DP3 by 10.2%
+                and FlowPolicy by 7.3%. Its average inference time is only 6.8 ms—19× faster than DP3 and nearly 2×
+                faster than FlowPolicy.
+                Our code is available at <a href="https://anonymous.4open.science/r/MP1-2254"
+                    target="_blank">https://anonymous.4open.science/r/xxxx</a>.
             </p>
         </div>
     </div>
 
     <div class="white_section_nerf w-container" style="display: flex; flex-direction: column; align-items: center;">
-        <h2 class="grey-heading_nerf" style="text-align: center;">Comparison of Inference Speed and Success Rate Across Methods</h2>
+        <h2 class="grey-heading_nerf" style="text-align: center;">Comparison of Inference Speed and Success Rate Across
+            Methods</h2>
         <div class="grid-container-1">
-            <img src="assets/images/fig1.png" style="display: block; margin: 0 auto; width: 50%; max-width: 400px; height: auto;" loading="lazy" alt="Strategy">
-            <p> 
-                The MP1 is compared with SOTA methods based on Diffusion and Flow in terms of inference time and success rate on the Adroit and Meta-World tasks. With inference time on the x-axis and success rate on the y-axis, it can be observed that the MP1 achieves SOTA performance in both inference speed and success rate.
+            <img src="assets/images/fig1.png"
+                style="display: block; margin: 0 auto; width: 50%; max-width: 400px; height: auto;" loading="lazy"
+                alt="Strategy">
+            <p>
+                The MP1 is compared with SOTA methods based on Diffusion and Flow in terms of inference time and success
+                rate on the Adroit and Meta-World tasks. With inference time on the x-axis and success rate on the
+                y-axis, it can be observed that the MP1 achieves SOTA performance in both inference speed and success
+                rate.
             </p>
         </div>
     </div>
@@ -401,23 +440,37 @@
     <div class="white_section_nerf w-container" style="display: flex; flex-direction: column; align-items: center;">
         <h2 class="grey-heading_nerf" style="text-align: center;">Success Rate Curves on Meta-World tasks</h2>
         <div class="grid-container-1">
-            <img src="assets/images/fig4.png" style="display: block; margin: 0 auto; width: 60%; max-width: 500px; height: auto;" loading="lazy" alt="Strategy">
-            <p> 
-                Success rate curves of different methods on multiple Meta-World tasks. We compare the performance of MP1, FlowPolicy, and DP3 on four tasks. The x-axis represents training steps, and the y-axis shows the success rate. Shaded areas represent the standard deviation across different random seeds. The proposed method achieves higher success rates with smaller variance.
+            <img src="assets/images/fig4.png"
+                style="display: block; margin: 0 auto; width: 60%; max-width: 500px; height: auto;" loading="lazy"
+                alt="Strategy">
+            <p>
+                Success rate curves of different methods on multiple Meta-World tasks. We compare the performance of
+                MP1, FlowPolicy, and DP3 on four tasks. The x-axis represents training steps, and the y-axis shows the
+                success rate. Shaded areas represent the standard deviation across different random seeds. The proposed
+                method achieves higher success rates with smaller variance.
             </p>
         </div>
     </div>
-    
+
     <div class="white_section_nerf w-container" style="display: flex; flex-direction: column; align-items: center;">
-        <h2 class="grey-heading_nerf" style="text-align: center;">The effect of the number of demonstrations on different methods.</h2>
+        <h2 class="grey-heading_nerf" style="text-align: center;">The effect of the number of demonstrations on
+            different methods.</h2>
         <div class="grid-container-1">
-            <img src="assets/images/fig3.png" style="display: block; margin: 0 auto; width: 60%; max-width: 500px; height: auto;" loading="lazy" alt="Strategy">
-            <p> 
-                We test the effect of different numbers of demon strations (0, 2, 5, 10, 20) on task performance. It can be observed that as the number of demonstrations increases, the success rate across various tasks significantly improves. Notably, tasks such as Assembly and Lever Pull quickly achieve near-optimal performance with as few as 5 to 10 demon strations. Our method, the MP1, consistently outperforms the Flow Policy, especially with fewer demonstrations. These results indicate that increasing the number of demonstrations effectively enhances model performance for most tasks, and the proposed method is particularly adept at adapting to few-shot learning scenarios.
+            <img src="assets/images/fig3.png"
+                style="display: block; margin: 0 auto; width: 60%; max-width: 500px; height: auto;" loading="lazy"
+                alt="Strategy">
+            <p>
+                We test the effect of different numbers of demon strations (0, 2, 5, 10, 20) on task performance. It can
+                be observed that as the number of demonstrations increases, the success rate across various tasks
+                significantly improves. Notably, tasks such as Assembly and Lever Pull quickly achieve near-optimal
+                performance with as few as 5 to 10 demon strations. Our method, the MP1, consistently outperforms the
+                Flow Policy, especially with fewer demonstrations. These results indicate that increasing the number of
+                demonstrations effectively enhances model performance for most tasks, and the proposed method is
+                particularly adept at adapting to few-shot learning scenarios.
             </p>
         </div>
     </div>
-    
+
 
 
 </body>
