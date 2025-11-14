@@ -183,10 +183,11 @@
                         style="color: red; font-weight: 900;">1</span>-step for Robotic Manipulation
                 </span>
             </h1>
-            <h2 class="grey-heading_nerf" style="text-align: center;"> Anonymous AAAI submission </h2>
+            <h2 class="grey-heading_nerf" style="text-align: center;"> Juyi Sheng<sup>*</sup>, Ziyi Wang<sup>*</sup>,
+                Peiming Li, Mengyuan Liu<sup>✉</sup> </h2>
             <div class="external-link">
-                <a class="btn" href="https://anonymous.4open.science/r/MP1-2254" role="button" target="_blank">
-                    <i class="fa-brands fa-github"></i> Anonymous Code </a>
+                <a class="btn" href="https://github.com/LogSSim/MP1" role="button" target="_blank">
+                    <i class="fa-brands fa-github"></i> MP1 Code </a>
             </div>
 
         </div>
@@ -520,8 +521,8 @@
                 Experimental results show MP1 achieves superior average task success rates, outperforming DP3 by 10.2%
                 and FlowPolicy by 7.3%. Its average inference time is only 6.8 ms—19× faster than DP3 and nearly 2×
                 faster than FlowPolicy.
-                Our code is available at <a href="https://anonymous.4open.science/r/MP1-2254"
-                    target="_blank">https://anonymous.4open.science/r/xxxx</a>.
+                Our code is available at <a href="https://github.com/LogSSim/MP1"
+                    target="_blank">https://github.com/LogSSim/MP1</a>.
             </p>
         </div>
     </div>
@@ -557,22 +558,36 @@
         </div>
     </div>
 
-    <div class="white_section_nerf w-container" style="display: flex; flex-direction: column; align-items: center;">
-        <h2 class="grey-heading_nerf" style="text-align: center;">The effect of the number of demonstrations on
-            different methods.</h2>
-        <div class="grid-container-1">
-            <img src="assets/images/fig3.png"
-                style="display: block; margin: 0 auto; width: 60%; max-width: 500px; height: auto;" loading="lazy"
-                alt="Strategy">
-            <p>
-                We test the effect of different numbers of demon strations (0, 2, 5, 10, 20) on task performance. It can
-                be observed that as the number of demonstrations increases, the success rate across various tasks
-                significantly improves. Notably, tasks such as Assembly and Lever Pull quickly achieve near-optimal
-                performance with as few as 5 to 10 demon strations. Our method, the MP1, consistently outperforms the
-                Flow Policy, especially with fewer demonstrations. These results indicate that increasing the number of
-                demonstrations effectively enhances model performance for most tasks, and the proposed method is
-                particularly adept at adapting to few-shot learning scenarios.
+    <div class="section nerf_section">
+        <div class="w-container grey_container" style="display: flex; flex-direction: column; align-items: center;">
+
+            <h2 class="grey-heading_nerf" style="text-align: center;">Citation</h2>
+
+            <p class="paragraph-3 nerf_text" style="text-align: center; width: 80%;">
+                If you find MP1 useful in your research, please consider citing:
             </p>
+
+            <pre style="background-color: #f0f0f0; 
+                        border: 1px solid #ddd; 
+                        border-radius: 5px; 
+                        padding: 20px; 
+                        text-align: left; 
+                        overflow-x: auto; 
+                        width: 80%; 
+                        max-width: 800px; 
+                        font-family: monospace; 
+                        white-space: pre-wrap; 
+                        word-break: break-all;">
+    <code>@inproceedings{mp1,
+        title={MP1: MeanFlow Tames Policy Learning in 1-step for Robotic Manipulation}, 
+        author={Juyi Sheng and Ziyi Wang and Peiming Li and Mengyuan Liu},
+        year={2025},
+        eprint={2507.10543},
+        archivePrefix={arXiv},
+        primaryClass={cs.RO},
+        url={https://arxiv.org/abs/2507.10543}, 
+  }</code>
+    </pre>
         </div>
     </div>
 
